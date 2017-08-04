@@ -1,9 +1,9 @@
-title: pride-prejudice-zombies
+title: Pride and Prejudice for Zombies
 hero_image: images/banner.png
-description: pride-prejudice-zombies description
+description: Create a zombie friendly version of Jane Austens novel to placate our new cadavrous overlords.
 original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
-theme: red # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
-duration: 1 # possible values: 1, 2 or 3
+theme: green
+duration: 3
 listed: false
 ingredient: false
 copyedit: false
