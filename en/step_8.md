@@ -9,6 +9,32 @@
 	```python
 	import re
 	from random import choice
-	from requests import get
+	from requests
 	```
--
+
+- Now use the requests module to fetch the book at https://www.gutenberg.org/files/1342/1342-0.txt and the text using the variable name `text`
+
+[[[generic-python-requests]]]
+
+- Once you have the text, it's probably best to write the data out to a file, rather than printing it.
+
+[[[generic-python-writing-to-a-file]]]
+
+--- hints --- --- hint ---
+- First you need to fetch the page data:
+  ```python
+  url = "https://www.gutenberg.org/files/1342/1342-0.txt"
+  r = requests.get(url)
+  ```
+--- /hint --- --- hint ---
+- The text can then be extracted from the data.
+  ```python
+  text = r.text
+  ```
+--- /hint --- --- hint ---
+- Rather than printing the text, you should write it out to a file:
+  ```python
+  with open('Zombies_Version.txt', 'w') as f:
+	  f.write(text)
+  ```
+--- /hint --- --- /hints ---

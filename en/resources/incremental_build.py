@@ -1,24 +1,32 @@
 import re
 from random import choice
+import requests
 
-text = '"I am tired", the man said'
+url = "https://www.gutenberg.org/files/1342/1342-0.txt"
+r = requests.get(url)
+text = r.text
 
-plural_nouns = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
+def change_prose(text):
+    plural_nouns = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
 
-singular_nouns = ['son', 'daughter', 'child','wife', 'woman', 'mrs', 'miss','husband', 'man', 'mr', 'sir', 'lady']
+    singular_nouns = ['son', 'daughter', 'child','wife', 'woman', 'mrs', 'miss','husband', 'man', 'mr', 'sir', 'lady']
 
-speaking = ['said', 'replied', 'spoke', 'shouted', 'cried']
-zombie_sounds = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
+    speaking = ['said', 'replied', 'spoke', 'shouted', 'cried']
+    zombie_sounds = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
 
-plural_nouns = plural_nouns + [word.title() for word in plural_nouns]
-singular_nouns = singular_nouns + [word.title() for word in singular_nouns]
+    plural_nouns = plural_nouns + [word.title() for word in plural_nouns]
+    singular_nouns = singular_nouns + [word.title() for word in singular_nouns]
 
 
-for word in plural_nouns:
-    text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
-for word in singular_nouns:
-    text = re.sub(r'\b{0}\b'.format(word), 'zombie', text)
-for word in speaking:
-    text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
-                      
-print(text)
+    for word in plural_nouns:
+        text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
+    for word in singular_nouns:
+        text = re.sub(r'\b{0}\b'.format(word), 'zombie', text)
+    for word in speaking:
+        text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
+    return(text)
+
+text = change_prose(text)
+
+with open('Zombie.txt', 'w') as f:
+    f.write(text)

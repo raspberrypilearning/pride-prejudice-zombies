@@ -56,5 +56,5 @@ for speech in find_speech(text):
 
 text = zombify_prose(text)
 
-with open('Zombies_Version.txt', 'w') as f:
-    f.write(text)
+with open('Zombies_Version.txt', 'w') as file:
+    file.write(text)
