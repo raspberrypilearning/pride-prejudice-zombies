@@ -36,19 +36,19 @@ def zombify_speech(words):
     return words
 
 def zombify_prose(words):
-    singular_nouns = ['Son', 'Daughter', 'Child','Wife', 'Woman', 'Mrs.', 'Miss','Husband', 'Man', 'Mr.', 'Sir', 'Lady']
+    singular_nouns = ['Son', 'Daughter', 'Child','Wife', 'Woman', 'Mrs', 'Miss','Husband', 'Man', 'Mr', 'Sir', 'Lady']
     plural_nouns = ['Ladies', 'Gentlemen', 'Women', 'Men', 'Children', 'Boys', 'Girls']
-    speaking = ['said', 'replied', 'spoke', 'shouted', 'cried']
+    speaking = ['Said', 'Replied', 'Spoke', 'Shouted', 'Sried']
     for word in singular_nouns:
-        words = words.replace(word, 'Zombie')
-        words = words.replace(word.lower(), 'zombie')
+        words = re.sub(r'\b{0}\b'.format(word), 'Zombie', words)
+        words = re.sub(r'\b{0}\b'.format(word.lower), 'zombie', words)
 
     for word in plural_nouns:
-        words = words.replace(word, 'Zombies')
-        words = words.replace(word.lower(), 'zombies')
+        words = re.sub(r'\b{0}\b'.format(word), 'Zombies', words)
+        words = re.sub(r'\b{0}\b'.format(word.lower()), 'zombies', words)
 
     for word in speaking:
-        words = words.replace(word, choice(['groaned', 'moaned', 'grunted', 'growled']))
+        words = re.sub(word, choice(['groaned', 'moaned', 'grunted', 'growled']), words)
     return words
 
 for speech in find_speech(text):

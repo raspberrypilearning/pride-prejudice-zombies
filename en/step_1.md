@@ -1,16 +1,10 @@
 ## Introduction
 
-Add project description here. What will learners be making?
+The world has been overrun with zombies, and the only thing they like doing more than eating brains, is reading about eating brains. Your mission is to create some literature for the zombies to read, to keep them distacted and save your life.
 
 ### What you will make
 
-Add something here to showcase here, for example:
-
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
-
-Add instructions here. These should explain either how the finished project will work, or explain how to interact with the content above.
+You'll be turning Jane Austen's Pride and Prejudice into a more zombie friendly version.
 
 ### What you will learn
 

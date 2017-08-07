@@ -2,12 +2,9 @@
 
 ### Hardware
 
-+ List hardware here, or delete section.
++ An internet connected computer
 
 ### Software
 
-+ List software here, or delete section.
++ Python 3
 
-### Additional Resources
-
-+ List additional resources, or delete section.
