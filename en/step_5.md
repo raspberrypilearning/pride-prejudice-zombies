@@ -3,16 +3,16 @@
 - There's a problem with the script as you currently have it. Consider this sentence.
 
 	```
-	sentence = "The men of the establishment were managing to manoeuvre the mentors."
+	text = "The men of the establishment were managing to manoeuvre the mentors."
 	```
 
-- Change the sentence in your script to the one above, and run it again. This time your sentence will look a little odd.
+- Change the text in your script to the one above, and run it again. This time your text will look a little odd.
 
 	```
 	The zombies of the establishzombiest were zombieaging to zombieoeuvre the zombiestors.
 	```
 
-- That's way too many zombies! Any `man` or `men` pattern within the sentence was changed to `zombie` so **men**`tors` becomes **zombie**`tors`. How can this be solved?
+- That's way too many zombies! Any `man` or `men` pattern within the text was changed to `zombie` so **men**`tors` becomes **zombie**`tors`. How can this be solved?
 
 - Luckily the clever people that came up with regex thought about this, and there's a way of only matching whole words.
 
@@ -33,7 +33,7 @@ r'\b{0}\b'.format(word)
 - Within one of your `for` loop, this would then look like this:
 ```python
 for word in plural_nouns:
-	sentence = re.sub(r'\b{0}\b.format(word), 'zombies', sentence)
+	text = re.sub(r'\b{0}\b.format(word), 'zombies', text)
 ```
 - Now you should be able to do the second `for` loop.
 --- /hint --- --- /hints ---

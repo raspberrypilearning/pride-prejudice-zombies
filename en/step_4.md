@@ -1,14 +1,14 @@
 ## Multiple similar replacements
 
-- What about a more complicated sentence passage of text.
+- What about a more complicated passage of text.
 
 	```python
-	sentence = "The boys and girls laughed at the woman's joke. The man did not find it so funny."
+	text = "The boys and girls laughed at the woman's joke. The man did not find it so funny."
 	```
 	
 - There are now two groups of nouns that need replacing. Singular nounds like `woman` and `man` and plural nouns like `boys` and `girls`.
 
-- How could this sentence be easily zombiefied, without too many lines of code.
+- How could this text be easily zombiefied, without too many lines of code.
 
 - Tackling the plural nouns first, if they were in a **list** then you could use a `for` loop to replace each of the words in the list.
 
@@ -24,8 +24,8 @@
 
 	```python
 	for word in plural_nouns:
-	    sentence = re.sub(word, 'zombies', sentence)
-	print(sentence)
+	    text = re.sub(word, 'zombies', text)
+	print(text)
 	```
 	
 - You should see the following printed out:
@@ -47,9 +47,9 @@
 - Here's some code to start you off:
 ```python
 for word in plural_nouns:
-	sentence = re.sub(word, 'zombies', sentence)
+	text = re.sub(word, 'zombies', text)
 for word in singular_nouns:
 ```
 --- /hint --- --- hint ---
-- Use `re.sub(word, 'zombie', sentence)` to convert the words in the sentence.
+- Use `re.sub(word, 'zombie', text)` to convert the words in the text.
 --- /hint --- --- /hints ---

@@ -4,15 +4,15 @@
 
 	```python
 	for word in plural_nouns:
-		sentence = re.sub(r'\b{0}\b'.format(word), 'zombies', sentence)
+		text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
 	for word in singular_nouns:
-		sentence = re.sub(r'\b{0}\b'.format(word), 'zombie', sentence)
+		text = re.sub(r'\b{0}\b'.format(word), 'zombie', text)
 	```
 
-- This works fine for most sentences, but it will fall over for the following sentence.
+- This works fine for most texts, but it will fall over for the following text.
 
 ```python
-sentence = 'Ladies and Gentlemen, will the boys and girls please leave''
+text = 'Ladies and Gentlemen, will the boys and girls please leave''
 ```
 
 - This is because our regex substitutions are case sensitive. So while `ladies` will be changed to `zombies`, `Ladies` will not.

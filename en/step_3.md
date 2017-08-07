@@ -20,17 +20,17 @@
 Begin by importing the `re` module and creating the string you want to alter.
 ```python
 import re
-sentence = 'The woman laughed at the silly men.'
+text = 'The woman laughed at the silly men.'
 ```
 --- /hint --- --- hint ---
 Now you want to use the `re.sub()` method to change, first `woman` to `zombie` and then again to change `men` into `zombies`
 ```python
-new_sentence = re.sub('pattern to find', 'patter to replace', sentence
+new_text = re.sub('pattern to find', 'patter to replace', text
 ```
 --- /hint --- --- hint ---
 You first substitution would therefore look like this.
 ```python
-re.sub('woman', 'zombie', sentence)
+re.sub('woman', 'zombie', text)
 ```
 Now you just need to repeat this line but use `'men'` and `'zombies'`
 --- /hint --- --- /hints ---

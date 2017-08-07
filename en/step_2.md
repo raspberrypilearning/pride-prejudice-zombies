@@ -7,4 +7,8 @@
 ### Software
 
 + Python 3
++ Python 3 requests module. This can be installed by typing the following into a terminal.
 
+	```bash
+	sudo pip3 install requests
+	```
