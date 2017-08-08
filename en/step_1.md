@@ -1,10 +1,10 @@
 ## Introduction
 
-The world has been overrun with zombies, and the only thing they like doing more than eating brains, is reading about eating brains. Your mission is to create some literature for the zombies to read, to keep them distacted and save your life.
+The world has been overrun with zombies, and the only thing they like doing more than eating brains is reading about eating brains. Your mission is to create some literature for the zombies to read, in order to keep them distracted and save your life.
 
 ### What you will make
 
-You'll be turning Jane Austen's Pride and Prejudice into a more zombie friendly version.
+You'll be turning Jane Austen's _Pride and Prejudice_ into a version more interesting to zombies.
 
 ### What you will learn
 
