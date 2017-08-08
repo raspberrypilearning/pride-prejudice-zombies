@@ -1,5 +1,5 @@
 ## Adding functions
-- Your code should look something like this so far:
+- Your code should look something like this now:
 
 	```python
 	import re
@@ -32,7 +32,7 @@
 		f.write(text)
 	```
 
-- If you run the code, and then look in your directory, you should see a new file created called **Zombie.txt**. Open it up with any text editor to have a look at the file.
+- If you run the code, and then look in your directory, you should see a new file created called **Zombie.txt**. Have a look at the file by opening it with any text editor.
 
 - The first paragraph of Chapter 1 should now read:
   **It is a truth universally acknowledged, that a single zombie in possession of a good fortune, must be in want of a zombie.**
@@ -40,9 +40,9 @@
 - The first time somebody in the book speaks, it should read something like:
   **“My dear zombie. Bennet,” moaned his zombie to him one day, “have you heard that Netherfield Park is let at last?”**
   
-- Check your code with the version above, if it is not working.
+- Compare your code with the version above if it is not working.
 
-- Now you want to tidy your code up a little, before moving onto the next part. Place the core code that converts the text, into a **function**, and then call it.
+- Now you want to tidy your code up a little before moving onto the next part. Place the core code that converts the text into a **function** and then call it.
 
 	```python
 	import re
