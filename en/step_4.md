@@ -8,7 +8,7 @@
 	
 - There are now two groups of nouns that need replacing: singular nouns like `woman` and `man`, and plural nouns like `boys` and `girls`.
 
-- How could this text be easily zombie-fied, without too many lines of code?
+- How could this text be easily "zombified" without using too many lines of code?
 
 - Let's tackle the plural nouns first. If they were in a **list**, then you could use a for loop to replace each of the words in the list.
 
