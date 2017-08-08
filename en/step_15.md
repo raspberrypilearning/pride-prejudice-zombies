@@ -1,6 +1,6 @@
-## Finishing Off
+## Finishing the zombie-friendly book
 
-- You now need to bring your function for zombifying speech along with the function for altering the prose and your search for speech, all together.
+- You now need to bring everything: your function for altering the prose, your function for translating speech, and your search for speech.
 
 - Your file should look something like this:
 
@@ -49,12 +49,12 @@
 		f.write(text)
 	```
 
-- The last step is to run through all of the speech in the book, and translate it to zombified speech. This can go just before you call the `change_prose()` function.
+- The last step is to run through all of the speech in the book, and translate it into zombie language. This can go just before you call the `change_prose()` function.
 
 ```python
 for words in speech:
     text = text.replace(words, zombify_speech(words))
 ```
 
-- Now run your code and have a look at the Zombified version of Pride and Prejudice that should now be saved.
+- Now run your code and have a look at the zombie version of _Pride and Prejudice_ that should now be saved.
 
