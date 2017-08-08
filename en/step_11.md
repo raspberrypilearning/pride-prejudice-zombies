@@ -1,17 +1,17 @@
-## Rule 2
+## Zombie language - rule 2
 
-The second rule for the zombie language is:
+The second rule for converting English into zombie language is:
 
-**all characters other than "zhrgbmna .!?-" (case-insensitive) are stripped.**
+- All characters other than "zhrgbmna .!?-" (case-insensitive) are taken out.
 
-- To do this, you can search for multiple characters again. This time though, you want to be excluding certain characters from the **regex** search.
+To do this, you can search for multiple characters again. But this time you want to exclude certain characters from the regex search.
 
 [[[generic-python-regex-excluding-patterns]]]
 
 - Use the information above to replace all the characters except for `zhrgbmna?\n .!?-` with an empty string (`""`).
 
 --- hints --- --- hint ---
-- Don't forget that you need to exclued upper and lowercase characters.
+- Don't forget that you need to exclued upper- and lower-case characters.
   ```python
   zhrgbmnaZHRGBMNA“”?\n .!?-
   ```
