@@ -1,4 +1,4 @@
-## Zombies everywhere.
+## Zombies everywhere
 
 - There's a problem with your script as it is now. Consider this sentence:
 
