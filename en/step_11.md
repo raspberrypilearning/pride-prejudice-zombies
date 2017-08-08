@@ -6,7 +6,7 @@ The second rule for the zombie language is:
 
 - To do this, you can search for multiple characters again. This time though, you want to be excluding certain characters from the **regex** search.
 
-[[[generic-python-regex-excluding-characters]]]
+[[[generic-python-regex-excluding-patterns]]]
 
 - Use the information above to replace all the characters except for `zhrgbmna?\n .!?-` with an empty string (`""`).
 
