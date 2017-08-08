@@ -17,7 +17,6 @@ def change_prose(text):
     plural_nouns = plural_nouns + [word.title() for word in plural_nouns]
     singular_nouns = singular_nouns + [word.title() for word in singular_nouns]
 
-
     for word in plural_nouns:
         text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
     for word in singular_nouns:
@@ -25,7 +24,6 @@ def change_prose(text):
     for word in speaking:
         text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
     return(text)
-
 
 def zombify_speech(text):
 	text = re.sub(r'[eiosEIOS]', 'r', text)
@@ -35,9 +33,8 @@ def zombify_speech(text):
 	return text
 
 speech = re.findall(r'“.*?”', text, flags=re.DOTALL)
-
-for i in speech:
-    text = text.replace(i, zombify_speech(i))
-    
+for words in speech:
+    text = text.replace(words, zombify_speech(words))
+text = change_prose(text)
 with open('Zombie.txt', 'w') as f:
     f.write(text)
