@@ -19,7 +19,7 @@
 --- hints --- --- hint ---
 Use `re.findall` with a pattern matching everything between `“` and `”`.
 --- /hint --- --- hint ---
-There's no need to use 'look ahead' or 'look behind' in this search, but you are looking at multi-line stings, so the `re.DOTALL` flag will be needed.
+There's no need to use the 'look ahead' or 'look behind' elements in this search, but you are looking at multi-line stings, so the `re.DOTALL` flag will be needed.
 --- /hint --- --- hint ---
 Your search should look like this:
 ```python
