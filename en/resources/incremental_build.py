@@ -26,7 +26,18 @@ def change_prose(text):
         text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
     return(text)
 
-text = change_prose(text)
 
+def zombify_speech(text):
+	text = re.sub(r'[eiosEIOS]', 'r', text)
+	text = re.sub(r'[^zhrgbmnaZHRGBMNA“”?\n .!?-]', '', text)
+	text = re.sub(r'r\b', 'rh', text)
+	text = re.sub(r'(\b[aA]\b)','hra', text)
+	return text
+
+speech = re.findall(r'“.*?”', text, flags=re.DOTALL)
+
+for i in speech:
+    text = text.replace(i, zombify_speech(i))
+    
 with open('Zombie.txt', 'w') as f:
     f.write(text)

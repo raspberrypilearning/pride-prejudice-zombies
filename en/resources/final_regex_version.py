@@ -5,7 +5,8 @@ book = open('pp.txt','r')
 text = book.read()
 
 def find_speech(words):
-    speech = re.findall(r'(?=“)(.*?)(?<=”)',words, flags=re.DOTALL)
+    speech = re.findall(r'“.*?”',words, flags=re.DOTALL)
+    #speech = re.findall(r'(?=“)(.*?)(?<=”)',words, flags=re.DOTALL)
     return speech
 
 def replace_eios(words):
