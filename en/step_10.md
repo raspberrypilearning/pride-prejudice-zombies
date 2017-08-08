@@ -11,7 +11,9 @@ Although zombies can understand English, that's not the way they speak. It isn't
 
 - Once again regex can help us out with this task. Rather than trying this out on the entire book straight away, create a new Python file, so that you can practice on a few sample sentences.
 
-- Now you can try and convert the following text using the first rule.
+# Rule 1
+
+- Try and convert the following text using the first rule.
 
 	```python
 	import re
