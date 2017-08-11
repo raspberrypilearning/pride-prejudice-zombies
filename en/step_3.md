@@ -25,12 +25,12 @@ text = 'The woman laughed at the silly men.'
 --- /hint --- --- hint ---
 Now you want to use the `re.sub()` method to first change `'woman'` to `'zombie'`, and then use it again to change `'men'` to `'zombies'`.
 ```python
-new_text = re.sub('pattern to find', 'pattern to replace', text)
+text = re.sub('pattern to find', 'pattern to replace', text)
 ```
 --- /hint --- --- hint ---
 You first substitution would therefore look like this.
 ```python
-re.sub('woman', 'zombie', text)
+text = re.sub('woman', 'zombie', text)
 ```
 Now you just need to repeat this line but use `'men'` and `'zombies'`.
 --- /hint --- --- /hints ---
