@@ -9,7 +9,7 @@
 	```python
 	import re
 	from random import choice
-	from requests
+	import requests
 	```
 
 - Now use the `requests` module to fetch the book at https://www.gutenberg.org/files/1342/1342-0.txt, and store its text using the variable name `text`.
