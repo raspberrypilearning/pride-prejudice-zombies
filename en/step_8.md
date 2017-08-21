@@ -27,12 +27,12 @@
   r = requests.get(url)
   ```
 --- /hint --- --- hint ---
-- The text can then be extracted from the data.
+- The text can then be extracted from the data. First delete the line where you currently set `text` to whatever string you were experimenting with. Then replace it with this:
   ```python
   text = r.text
   ```
 --- /hint --- --- hint ---
-- Rather than printing the text, you should write it out to a file:
+- Rather than printing the text, you should write it out to a file. So delete any `print(text)` lines you have, and instead use this:
   ```python
   with open('Zombies_Version.txt', 'w') as f:
 	  f.write(text)
