@@ -5,7 +5,8 @@
 	```python
 	text = "The boys and girls laughed at the woman's joke. The man did not find it so funny."
 	```
-	
+- Create a new Python file, and `import re` again. Then create the `text` string above.
+
 - There are now two groups of nouns that need replacing: singular nouns like `woman` and `man`, and plural nouns like `boys` and `girls`.
 
 - How could this text be easily "zombified" without using too many lines of code?
@@ -17,7 +18,7 @@
 - Create a list of plural nouns that you'd like to change to the word `zombies`. 
 
 	```python
-	plural_nouns = plural_nouns = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
+	plural_nouns = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
 	```
 
 - Now you need to iterate over the list and use `re.sub()` on each word.

@@ -33,7 +33,7 @@ r'\b{0}\b'.format(word)
 - Within one of your for loops, it would look like this:
 ```python
 for word in plural_nouns:
-	text = re.sub(r'\b{0}\b.format(word), 'zombies', text)
+	text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
 ```
 - Now you should be able to do the second for loop by yourself.
 --- /hint --- --- /hints ---
