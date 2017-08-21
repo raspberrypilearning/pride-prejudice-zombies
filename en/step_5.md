@@ -18,11 +18,11 @@
 
 [[[generic-python-regex-substitute-word-boundaries]]]
 
-- You could change all the words in you lists, so that instead of `'ladies'` and `'gentlemen'` you have `r'\bladies\b'` and `r'\bgentlemen\b'`, for instance. But that seems a lot of work. It's easier to use the amazing `.format()` method in Python for this job.
+- Using `r'\bman\b'` as your search pattern, would only find the specific word `man`. You could then use `re.sub()` to swap out `man` for `zombie`. This would mean using lots of loops though; one for each substitution. Using the `.format` method in Python can ensure you only use two loops; one for plural nouns and one for singular nouns.
 
 [[[generic-python-simple-string-formating]]]
 
-- Now try using `.format()` within your `re.sub()` methods, to automatically turn `'ladies'` into `'\bladies\'`, for instance.
+- Now try using `.format()` within your `re.sub()` methods, to automatically turn `'ladies'` into `'zombies'` and `'gentlemen'` into `'zombies'`.
 
 --- hints --- --- hint ---
 - Here's how you can set up the pattern you are after.
