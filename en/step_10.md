@@ -9,7 +9,7 @@ Although zombies can understand English, that's not the way they speak. It isn't
 1. Any lower-case 'r' at the end of a word is replaced with 'rh'
 1. An 'a' or 'A' by itself has to be replaced with 'hra'
 
-- Once again regex can help us out with this task. Rather than trying this out on the entire book straight away, create a new Python file, so that you can practice on a few sample sentences.
+- Once again regex can help us out with this task. Rather than trying this out on the entire book straight away, **create a new Python file**, so that you can practice on a few sample sentences.
 
 # Rule 1
 

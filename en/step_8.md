@@ -14,6 +14,8 @@
 
 - Now use the `requests` module to fetch the book at https://www.gutenberg.org/files/1342/1342-0.txt, and store its text using the variable name `text`.
 
+- The section below shows you how to fetch a webpage and store it. You will just need to adjust the `url`.
+
 [[[generic-python-requests]]]
 
 - Once you have the text, it's probably best to write the data out to a file, rather than printing it.
@@ -32,9 +34,9 @@
   text = r.text
   ```
 --- /hint --- --- hint ---
-- Rather than printing the text, you should write it out to a file. So delete any `print(text)` lines you have, and instead use this:
+- Rather than printing the text, you should write it out to a file. So delete any `print(text)` lines you have, and instead use this at the very end of your script:
   ```python
-  with open('Zombies_Version.txt', 'w') as f:
+  with open('Zombies.txt', 'w') as f:
 	  f.write(text)
   ```
 --- /hint --- --- /hints ---
