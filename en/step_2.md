@@ -13,7 +13,7 @@
 	sudo pip3 install requests
 	```
 
-or on Windows:
+[or on Windows](https://projects.raspberrypi.org/en/projects/using-pip-on-windows):
 
 ```
 pip install requests
