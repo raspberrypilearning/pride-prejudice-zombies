@@ -36,7 +36,7 @@
 --- /hint --- --- hint ---
 - Rather than printing the text, you should write it out to a file. So delete any `print(text)` lines you have, and instead use this at the very end of your script:
   ```python
-  with open('Zombies.txt', 'w') as f:
+  with open('Zombies.txt', 'w', encoding="utf-8") as f:
 	  f.write(text)
   ```
 --- /hint --- --- /hints ---
