@@ -22,7 +22,11 @@
 
 [[[generic-python-simple-string-formating]]]
 
-- Now try using `.format()` within your `re.sub()` methods, to automatically turn `'ladies'` into `'zombies'` and `'gentlemen'` into `'zombies'`.
+- Now try using `.format()` within your `re.sub()` methods, to automatically turn `'ladies'` into `'zombies'` and `'gentlemen'` into `'zombies'`. You can try it out on this bit of text:
+
+```python
+text = "The gentlemen of the establishment were managing to manoeuvre the mentors, while the ladies relaxed and watched in amusement"
+```
 
 --- hints --- --- hint ---
 - Here's how you can set up the pattern you are after.
