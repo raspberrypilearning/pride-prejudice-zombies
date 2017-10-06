@@ -28,7 +28,7 @@
 	for word in speaking:
 		text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
 
-	with open('Zombie.txt', 'w') as f:
+	with open('Zombie.txt', 'w', encoding="utf-8") as f:
 		f.write(text)
 	```
 
@@ -75,6 +75,6 @@
 
 	text = change_prose(text)
 
-	with open('Zombie.txt', 'w') as f:
+	with open('Zombie.txt', 'w', encoding="utf-8") as f:
 		f.write(text)
 	```

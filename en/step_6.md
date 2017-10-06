@@ -12,7 +12,7 @@
 - This works fine for most texts, but it will fail in the following example:
 
 ```python
-text = 'Ladies and Gentlemen, will the boys and girls please leave''
+text = 'Ladies and Gentlemen, will the boys and girls please leave'
 ```
 
 - This is because our regex substitutions are case-sensitive. So while `'ladies'` will be changed to `'zombies'`, `'Ladies'` won't be changed.

@@ -45,7 +45,7 @@
 	
 	speech = re.findall(r'“.*?”', text, flags=re.DOTALL)
 
-	with open('Zombie.txt', 'w') as f:
+	with open('Zombie.txt', 'w', encoding="utf-8") as f:
 		f.write(text)
 	```
 
