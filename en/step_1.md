@@ -10,4 +10,4 @@ You'll be turning Jane Austen's _Pride and Prejudice_ into a version more intere
 
 This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
-+ [Add curriculum strand/level description.](https://www.raspberrypi.org/curriculum/strand/level)
++ [Apply abstraction and decomposition to solve more complex problems.](https://curriculum.raspberrypi.org/programming/developer/)
