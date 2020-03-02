@@ -1,0 +1,5 @@
+- substitute text - single patterns
+- substitute text - whole words
+- substitute text - groups of letters
+- substitute text - ignore
+
