@@ -1,0 +1,25 @@
+1. Use requests grab some text
+1. Use regex to extract a chapter
+#+BEGIN_SRC python
+result = re.findall(r'(?<=Chapter 3)(.*?)(?=Chapter 4)', book_text, flags=re.S)
+#+END_SRC
+1. Use regex to replace a string (part and single)
+#+BEGIN_SRC python
+var = '[Mm]an'
+## Replace all occurences
+re.sub(r'{0}'.format(var), 'zombie', string)
+## Replace only whole match
+re.sub(r'\b{0}\b'.format(var), 'zombie', string)
+#+END_SRC
+1. Use regex to find words and replace while preserving case
+#+BEGIN_SRC python
+re.sub(r'\b{0}\b'.format(var), lambda x: 'Zombie' if x.group()[0].isupper() else 'zombie', string)
+#+END_SRC
+1. Use regex to find occurances of speech
+#+BEGIN_SRC python
+re.findall(r'(?<=["“])(.*?)(?=["”])',string)
+#+END_SRC
+1. Use regex to replace characters
+#+BEGIN_SRC python
+re.sub(r'[eoi]','grrr', string)
+#+END_SRC
