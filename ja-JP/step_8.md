@@ -23,20 +23,29 @@
 [[[generic-python-writing-to-a-file]]]
 
 --- hints --- --- hint ---
+
 - First you need to fetch the page data:
+
   ```python
   url = "https://www.gutenberg.org/files/1342/1342-0.txt"
   r = requests.get(url)
   ```
+
 --- /hint --- --- hint ---
+
 - The text can then be extracted from the data. First delete the line where you currently set `text` to whatever string you were experimenting with. Then replace it with this:
+
   ```python
   text = r.text
   ```
+
 --- /hint --- --- hint ---
+
 - Rather than printing the text, you should write it out to a file. So delete any `print(text)` lines you have, and instead use this at the very end of your script:
+
   ```python
   with open('Zombies.txt', 'w', encoding="utf-8") as f:
       f.write(text)
   ```
+
 --- /hint --- --- /hints ---
