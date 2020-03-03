@@ -11,15 +11,23 @@ Rule 3 states that lower-case 'r' characters at the end of words need to be repl
 - To follow rule 4, you will need another replacement pattern that looks for the characters `'a'` and `'A'` when they are on their own, and replaces them with `'hra'`
 
 --- hints --- --- hint ---
+
 - The first pattern you are searching for is `r'r\b'`.
+
 --- /hint --- --- hint ---
+
 - Your full substitution will look like this:
+
 ```python
 text = re.sub(r'r\b', 'rh', text)
 ```
+
 --- /hint --- --- hint ---
+
 - To find single `a` or `A` characters, you can use the `r'(\b[aA]\b)'` pattern.
+
 ```python
 text = re.sub(r'(\b[aA]\b)','hra', text)
 ```
+
 --- /hint --- --- /hints ---

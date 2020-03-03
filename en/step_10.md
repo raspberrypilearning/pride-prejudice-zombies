@@ -27,12 +27,19 @@ Although zombies can understand English, that's not the way they speak. It isn't
 - Now use regex to complete rule 1.
 
 --- hints --- --- hint ---
+
 - You need to convert all the `'e'`,`'i'`,`'o'`, and `'s'` characters, whether they are upper case or lower case, into `'r'` characters.
+
 --- /hint --- --- hint ---
+
 - The regex pattern you should be looking for is `[eiosEIOS]`.
+
 --- /hint --- --- hint ---
+
 - The text can be converted with a single line:
+
 	```python
 	text = re.sub(r'[eiosEIOS]', 'r', text)
 	```
+	
 --- /hint --- --- /hints ---

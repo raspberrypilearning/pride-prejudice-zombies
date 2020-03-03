@@ -28,6 +28,7 @@ text = 'Ladies and Gentlemen, will the boys and girls please leave'
   ```python
   ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
   ```
+
   to create the following:
   
   ```python
@@ -37,23 +38,31 @@ text = 'Ladies and Gentlemen, will the boys and girls please leave'
 - Use what you have learned to create two **new** lists called `plural_nouns_title` and `singular_nouns_title`.
 
 --- hints --- --- hint ---
+
 - `'ladies'` can be turned into `'Ladies'` using the `.title()` operation.
+
 	```python
 	>>> 'ladies'.title()
 	'Ladies'
 	```
+
 --- /hint --- --- hint ---
+
 - The basic structure of the list comprehension would be something like this:
 
 	```python
 	[word.title() for word in plural_nouns]
 	```
+
 --- /hint --- --- hint ---
+
 - The full list comprehension will be:
   ```python
   plural_nouns_title = [word.title() for word in plural_nouns]
   ```
+
 - The same needs to be done for the singular nouns.
+
 --- /hint --- --- /hints ---
 
 - Now you will need an additional **two** `for` loops. One for `plural_nouns_title` and one for `singular_nouns_title`.
