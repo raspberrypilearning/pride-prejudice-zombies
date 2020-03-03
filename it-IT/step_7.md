@@ -27,6 +27,7 @@
     import re
     from random import choice
     ```
+
 - Then construct the for loop, using the same regex substitution method you used before, but this time using a random item from `zombie_sounds`.
 
     ```python
@@ -35,6 +36,7 @@
     ```
 
 - Running your code now should give you the following output, with the final word randomly chosen from the list.
+
 ```python
 >>> "I am tired", the zombie groaned
 ```
