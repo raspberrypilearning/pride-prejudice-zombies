@@ -5,6 +5,7 @@
 	```python
 	text = "The boys and girls laughed at the woman's joke. The man did not find it so funny."
 	```
+
 - Create a new Python file, and `import re` again. Then create the `text` string above.
 
 - There are now two groups of nouns that need replacing: singular nouns like `woman` and `man`, and plural nouns like `boys` and `girls`.
@@ -42,15 +43,21 @@
 	```
 	
 --- hints --- --- hint ---
+
 - Your second for loop should start below the first, but outside of it.
 
 --- /hint --- --- hint ---
+
 - Here's some code to start you off:
+
 ```python
 for word in plural_nouns:
 	text = re.sub(word, 'zombies', text)
 for word in singular_nouns:
 ```
+
 --- /hint --- --- hint ---
+
 - Use `re.sub(word, 'zombie', text)` to convert the words in the text.
+
 --- /hint --- --- /hints ---

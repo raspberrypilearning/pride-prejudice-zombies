@@ -29,15 +29,22 @@ text = "The gentlemen of the establishment were managing to manoeuvre the mentor
 ```
 
 --- hints --- --- hint ---
+
 - Here's how you can set up the pattern you are after.
+
 ```python
 r'\b{0}\b'.format(word)
 ```
+
 --- /hint --- --- hint ---
+
 - Within one of your for loops, it would look like this:
+
 ```python
 for word in plural_nouns:
 	text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
 ```
+
 - Now you should be able to do the second for loop by yourself.
+
 --- /hint --- --- /hints ---
