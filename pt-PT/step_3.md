@@ -16,17 +16,31 @@
 
 [[[generic-python-regex-substitute-simple-pattern]]]
 
---- hints --- --- hint --- Begin by importing the `re` module and creating the string you want to alter.
+--- hints --- --- hint ---
+
+Begin by importing the `re` module and creating the string you want to alter.
+
 ```python
 import re
 text = 'The woman laughed at the silly men.'
 ```
---- /hint --- --- hint --- Now you want to use the `re.sub()` method to first change `'woman'` to `'zombie'`, and then use it again to change `'men'` to `'zombies'`.
+
+--- /hint --- --- hint ---
+
+Now you want to use the `re.sub()` method to first change `'woman'` to `'zombie'`, and then use it again to change `'men'` to `'zombies'`.
+
 ```python
 text = re.sub('pattern to find', 'pattern to replace', text)
 ```
---- /hint --- --- hint --- You first substitution would therefore look like this.
+
+--- /hint --- --- hint ---
+
+You first substitution would therefore look like this.
+
 ```python
 text = re.sub('woman', 'zombie', text)
 ```
-Now you just need to repeat this line but use `'men'` and `'zombies'`. --- /hint --- --- /hints ---
+
+Now you just need to repeat this line but use `'men'` and `'zombies'`.
+
+--- /hint --- --- /hints ---
