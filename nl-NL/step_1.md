@@ -1,13 +1,13 @@
-## Introduction
+## Inleiding
 
-The world has been overrun with zombies, and the only thing they like doing more than eating brains is reading about eating brains. Your mission is to create some literature for the zombies to read, in order to keep them distracted and save your life.
+De wereld is overspoeld met zombies en het enige wat ze leuker vinden om te doen dan hersens eten is lezen over hersens eten. Jouw missie is om wat literatuur te maken voor de zombies om te lezen, om ze afgeleid te houden en je leven te redden.
 
-### What you will make
+### Wat ga je maken
 
-You'll be turning Jane Austen's _Pride and Prejudice_ into a version more interesting to zombies.
+Je maakt van Jane Austen's _Pride en Prejudice (Trots en voordelen)_ een versie die interessanter is voor zombies.
 
-### What you will learn
+### Wat ga je leren
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+Dit project behandelt elementen uit de volgende onderdelen van het [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
-+ [Apply abstraction and decomposition to solve more complex problems.](https://curriculum.raspberrypi.org/programming/developer/)
++ [Pas abstractie en decompositie toe om complexere problemen op te lossen.](https://curriculum.raspberrypi.org/programming/developer/)
