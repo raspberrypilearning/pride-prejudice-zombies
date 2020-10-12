@@ -1,63 +1,63 @@
-## Multiple similar replacements
+## Meerdere vergelijkbare vervangingen
 
-- What about a more complicated passage of text? For example:
+- Hoe zit het met een ingewikkeldere tekstpassage? Bijvoorbeeld:
 
     ```python
-    text = "The boys and girls laughed at the woman's joke. The man did not find it so funny."
+    tekst = "The boys and girls laughed at the woman's joke. The man did not find it so funny."
     ```
 
-- Create a new Python file, and `import re` again. Then create the `text` string above.
+- Maak een nieuw Python bestand en `import re` weer. Maak vervolgens de tekenreeks `tekst` hierboven.
 
-- There are now two groups of nouns that need replacing: singular nouns like `woman` and `man`, and plural nouns like `boys` and `girls`.
+- Er zijn nu twee groepen zelfstandige naamwoorden die moeten worden vervangen: zelfstandige naamwoorden in het enkelvoud zoals `woman` en `man`, en zelfstandige naamwoorden in het meervoud zoals `boys` en `girls`.
 
-- How could this text be easily "zombified" without using too many lines of code?
+- Hoe kan deze tekst gemakkelijk "gezombificeerd" worden zonder teveel regels code te gebruiken?
 
-- Let's tackle the plural nouns first. If they were in a **list**, then you could use a for loop to replace each of the words in the list.
+- Laten we eerst de zelfstandige naamwoorden in het meervoud aanpakken. Als ze in een **lijst** zitten, kun je een for-lus gebruiken om elk van de woorden in de lijst te vervangen.
 
 [[[generic-python-for-loop-list]]]
 
-- Create a list of plural nouns that you'd like to change to the word `zombies`.
+- Maak een lijst met meerdere zelfstandige naamwoorden die je wilt wijzigen in het woord `zombies`.
 
     ```python
-    plural_nouns = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
+    meervoud_zelfstandig_naamwoord = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
     ```
 
-- Now you need to iterate over the list and use `re.sub()` on each word.
+- Nu moet je de lijst herhalen en `re.sub ()` gebruiken voor elk woord.
 
     ```python
-    for word in plural_nouns:
-        text = re.sub(word, 'zombies', text)
-    print(text)
+    for woord in meervoud_zelfstandig_naamwoorden:
+        tekst = re.sub(woord, 'zombies', tekst)
+    print(tekst)
     ```
 
-- You should see the following printed out:
+- Je zou het volgende moeten zien:
 
     ```
     The zombies and zombies laughed at the woman's joke. The man did not find it so funny.
     ```
 
-- Now try and write another for loop that iterates over a list of singular nouns and replaces them with `'zombie'`. Here's a list to start you off:
+- Probeer nu een andere for-lus te schrijven die over een lijst met zelfstandige naamwoorden in het enkelvoud herhaalt en deze vervangt door `'zombie'`. Hier is een lijst om mee te beginnen:
 
     ```python
-    singular_nouns = ['son', 'daughter', 'child', 'wife', 'woman', 'mrs', 'miss', 'husband', 'man', 'mr', 'sir', 'lady']
+    enkelvoud_zelfstandig_naamwoorden = ['son', 'daughter', 'child', 'wife', 'woman', 'mrs', 'miss', 'husband', 'man', 'mr', 'sir', 'lady']
     ```
 
 --- hints --- --- hint ---
 
-- Your second for loop should start below the first, but outside of it.
+- Je tweede for-lus zou onder de eerste moeten beginnen, maar daarbuiten.
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- Here's some code to start you off:
+- Hier is de code om mee te beginnen:
 
 ```python
-for word in plural_nouns:
-    text = re.sub(word, 'zombies', text)
-for word in singular_nouns:
+for woord in meervoud_zelfstandig_naamwoorden:
+  tekst = re.sub(woord, 'zombies', tekst)
+for woord in enkelvoud_zelfstandig_naamwoorden:
 ```
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- Use `re.sub(word, 'zombie', text)` to convert the words in the text.
+- Gebruik `re.sub(woord, 'zombie', tekst)` om de woorden om te zetten in de tekst.
 
 --- /hint --- --- /hints ---
