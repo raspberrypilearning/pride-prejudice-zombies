@@ -1,60 +1,60 @@
-## Finishing the zombie-friendly book
+## Het zombievriendelijke boek afmaken
 
-- You now need to bring everything: your function for altering the prose, your function for translating speech, and your search for speech.
+- Je moet nu alles meenemen: jouw functie voor het wijzigen van het proza, jouw functie voor het vertalen van spraak en jouw zoektocht naar spraak.
 
-- Your file should look something like this:
+- Je bestand zou er ongeveer zo uit moeten zien:
 
     ```python
     import re
-    from random import choice
-    import requests
+from random import choice
+import requests
 
-    url = "https://www.gutenberg.org/files/1342/1342-0.txt"
-    r = requests.get(url)
-    text = r.text
+url = "https://www.gutenberg.org/files/1342/1342-0.txt"
+r = requests.get(url)
+tekst = r.text
 
-    def change_prose(text):
-        plural_nouns = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
+def verander_proza(tekst):
+    meervoud_zelfstandig_naamwoorden = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
 
-        singular_nouns = ['son', 'daughter', 'child','wife', 'woman', 'mrs', 'miss','husband', 'man', 'mr', 'sir', 'lady']
+    enkelvoud_zelfstandig_naamwoorden = ['son', 'daughter', 'child','wife', 'woman', 'mrs', 'miss','husband', 'man', 'mr', 'sir', 'lady']
 
-        speaking = ['said', 'replied', 'spoke', 'shouted', 'cried']
-        zombie_sounds = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
+    spreken = ['said', 'replied', 'spoke', 'shouted', 'cried']
+    zombie_geluiden = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
 
-        plural_nouns = plural_nouns + [word.title() for word in plural_nouns]
-        singular_nouns = singular_nouns + [word.title() for word in singular_nouns]
-
-
-        for word in plural_nouns:
-            text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
-        for word in singular_nouns:
-            text = re.sub(r'\b{0}\b'.format(word), 'zombie', text)
-        for word in speaking:
-            text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
-        return(text)
+    meervoud_zelfstandig_naamwoorden = meervoud_zelfstandig_naamwoorden + [woord.title() for woord in meervoud_zelfstandig_naamwoorden]
+    enkelvoud_zelfstandig_naamwoorden = enkelvoud_zelfstandig_naamwoorden + [woord.title() for woord in enkelvoud_zelfstandig_naamwoorden]
 
 
-    def zombify_speech(text):
-        text = re.sub(r'[eiosEIOS]', 'r', text)
-        text = re.sub(r'[^zhrgbmnaZHRGBMNA“”?\n .!?-]', '', text)
-        text = re.sub(r'r\b', 'rh', text)
-        text = re.sub(r'(\b[aA]\b)','hra', text)
-        return text
+    for woord in meervoud_zelfstandig_naamwoorden:
+        tekst = re.sub(r'\b{0}\b'.format(woord), 'zombies', tekst)
+    for woord in enkelvoud_zelfstandig_naamwoorden:
+        tekst = re.sub(r'\b{0}\b'.format(woord), 'zombie', tekst)
+    for word in spreken:
+        tekst = re.sub(r'\b{0}\b'.format(woord), choice(zombie_geluiden), tekst)
+    return(tekst)
+    
 
-    text = change_prose(text)
+def zombificeer_spraak(tekst): 
+    tekst = re.sub(r'[eiosEIOS]', 'r', tekst)
+    tekst = re.sub(r'[^zhrgbmnaZHRGBMNA“”?\n .!?-]', '', tekst)
+    tekst = re.sub(r'r\b', 'rh', text)
+    tekst = re.sub(r'(\b[aA]\b)','hra', tekst)
+    return tekst
 
-    speech = re.findall(r'“.*?”', text, flags=re.DOTALL)
+tekst = verander_proza(tekst)
 
-    with open('Zombie.txt', 'w', encoding="utf-8") as f:
-        f.write(text)
+spraak = re.findall(r'“.*?”', tekst, flags=re.DOTALL)
+
+with open('Zombie.txt', 'w', encoding="utf-8") as f:
+    f.write(tekst)
     ```
 
-- The last step is to run through all of the speech in the book, and translate it into zombie language. This can go just before you call the `change_prose()` function.
+- De laatste stap is om alle spraak in het boek te doorlopen en te vertalen in zombietaal. Dit kan gebeuren voordat je de functie `proza_veranderen()` aanroept.
 
 ```python
-for words in speech:
-    text = text.replace(words, zombify_speech(words))
+for woorden in spraak:
+    tekst = tekst.replace(woorden, zombificeer_spraak(woorden))
 ```
 
-- Now run your code and have a look at the zombie version of _Pride and Prejudice_ that should now be saved.
+- Voer nu je code uit en bekijk de zombieversie van _Pride en Prejudice_ die nu moet zijn opgeslagen.
 
