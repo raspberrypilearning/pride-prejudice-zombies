@@ -1,37 +1,37 @@
-## Zombie language - rule 2
+## Zombie-taal - regel 2
 
-The second rule for converting English into zombie language is:
+De tweede regel voor het converteren van Engels naar zombietaal is:
 
-- All characters other than "zhrgbmna .!?-" (case-insensitive) are taken out.
+- Alle tekens behalve "zhrgbmna.!? -" (niet hoofdlettergevoelig) worden verwijderd.
 
-To do this, you can search for multiple characters again. But this time you want to exclude certain characters from the regex search.
+Om dit te doen, kun je opnieuw naar meerdere karakters zoeken. Maar deze keer wil je bepaalde tekens uitsluiten van de regex-zoekopdracht.
 
 [[[generic-python-regex-excluding-patterns]]]
 
-- Use the information above to replace all the characters except for `zhrgbmna?\n .!?-` with an empty string (`""`).
+- Gebruik de bovenstaande informatie om alle tekens te vervangen, behalve `zhrgbmna?\n .!?-` door een lege string (`""`).
 
 --- hints --- --- hint ---
 
-- Don't forget that you need to exclued upper- and lower-case characters.
+- Vergeet niet dat je hoofdletters en kleine letters moet uitsluiten.
 
   ```python
   zhrgbmnaZHRGBMNA“”?\n .!?-
   ```
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- The pattern you are looking to exclude therefore becomes:
+- Het patroon dat je wilt uitsluiten wordt daarom:
 
   ```python
   r'[^zhrgbmnaZHRGBMNA“”?\n .!?-]'
   ```
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- Your full substitution will look like this:
+- Je volledige vervanging ziet er als volgt uit:
 
   ```python
-  text = re.sub(r'[^zhrgbmnaZHRGBMNA“”?\n .!?-]', '', text)
+  tekst = re.sub(r'[^zhrgbmnaZHRGBMNA“”?\n .!?-]', '', tekst)
   ```
 
---- /hint --- --- /hints ---
+--- / hint --- --- / hints ---
