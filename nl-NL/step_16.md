@@ -1,11 +1,11 @@
-## Taking it further
+## Verder gaan
 
 --- challenge ---
 
-Here are a few ideas for how to take your script a little further:
-- At the moment, although the `change_prose` function replaces text with both upper- and lower-case letters, it always replaces them with lower-case `zombie`. Can you change this so that the word `zombie` is in a matching case?
-- Can you add more lists of words to be changed? For instance, change all mentions of any food or meals to `'brainz'`.
-- Can you try your program on other books, and see whether you need to change any of the code to make it handle multiple different texts?
+Hier zijn een paar ideeën om je script wat verder te brengen:
+- Op dit moment, hoewel de `proza_veranderen` functie tekst vervangt met zowel hoofdletters als kleine letters, vervangt deze ze altijd door de kleine letter `zombie`. Kun je dit veranderen zodat het woord `zombie` met de juiste hoofd- en kleine letters geschreven wordt?
+- Kun je meer lijsten met woorden toevoegen die je wilt wijzigen? Verander bijvoorbeeld alle vermeldingen van voedsel of maaltijden in `'brainz'`.
+- Kun je je programma met andere boeken uitproberen en kijken of je de code moet wijzigen om meerdere verschillende teksten te kunnen verwerken?
 
 --- /challenge ---
 
