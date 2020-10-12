@@ -1,19 +1,19 @@
-## What you will need
+## Wat heb je nodig
 
 ### Hardware
 
-+ A computer connected to the internet
++ Een computer verbonden met internet
 
 ### Software
 
 + Python 3
-+ Python 3 `requests` module, which can be installed by typing the following into a terminal window on Linux or MacOS:
++ Python 3 `requests` module, die kan worden geïnstalleerd door het volgende in een terminalvenster op Linux of MacOS te typen:
 
     ```bash
     sudo pip3 install requests
     ```
 
-[or on Windows](https://projects.raspberrypi.org/en/projects/using-pip-on-windows):
+[of op Windows](https://projects.raspberrypi.org/en/projects/using-pip-on-windows):
 
 ```
 pip install requests
