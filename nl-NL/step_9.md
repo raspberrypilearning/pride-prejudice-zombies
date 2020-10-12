@@ -1,5 +1,5 @@
-## Adding functions
-- Your code should look something like this now:
+## Functies toevoegen
+- Je code zou er ongeveer als volgt uit moeten zien:
 
     ```python
     import re
@@ -8,39 +8,39 @@
 
     url = "https://www.gutenberg.org/files/1342/1342-0.txt"
     r = requests.get(url)
-    text = r.text
+    tekst = r.text
 
-    plural_nouns = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
+    meervoud_zelfstandig_naamwoorden = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
 
-    singular_nouns = ['son', 'daughter', 'child','wife', 'woman', 'mrs', 'miss','husband', 'man', 'mr', 'sir', 'lady']
+    enkelvoud_zelfstandig_naamwoorden = ['son', 'daughter', 'child','wife', 'woman', 'mrs', 'miss','husband', 'man', 'mr', 'sir', 'lady']
 
-    speaking = ['said', 'replied', 'spoke', 'shouted', 'cried']
-    zombie_sounds = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
+    spreken = ['said', 'replied', 'spoke', 'shouted', 'cried']
+    zombie_geluiden = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
 
-    plural_nouns = plural_nouns + [word.title() for word in plural_nouns]
-    singular_nouns = singular_nouns + [word.title() for word in singular_nouns]
+    meervoud_zelfstandig_naamwoorden = meervoud_zelfstandig_naamwoorden + [woord.title() for woord in meervoud_zelfstandig_naamwoorden]
+    enkelvoud_zelfstandig_naamwoorden = enkelvoud_zelfstandig_naamwoorden + [woord.title() for woord in enkelvoud_zelfstandig_naamwoorden]
 
 
-    for word in plural_nouns:
-        text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
-    for word in singular_nouns:
-        text = re.sub(r'\b{0}\b'.format(word), 'zombie', text)
-    for word in speaking:
-        text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
+    for woord in meervoud_zelfstandig_naamwoorden:
+        tekst = re.sub(r'\b{0}\b'.format(woord), 'zombies', tekst)
+    for woord in enkelvoud_zelfstandig_naamwoorden:
+        tekst = re.sub(r'\b{0}\b'.format(woord), 'zombie', tekst)
+    for word in spreken:
+        tekst = re.sub(r'\b{0}\b'.format(woord), choice(zombie_geluiden), tekst)
 
     with open('Zombie.txt', 'w', encoding="utf-8") as f:
-        f.write(text)
+        f.write(tekst)
     ```
 
-- If you run the code, and then look in your directory, you should see a new file created called **Zombie.txt**. Have a look at the file by opening it with any text editor.
+- Als je de code uitvoert en vervolgens in je map kijkt, zou je een nieuw bestand moeten zien met de naam **Zombie.txt**. Bekijk het bestand door het met een willekeurige teksteditor te openen.
 
-- The first paragraph of Chapter 1 should now read: **It is a truth universally acknowledged, that a single zombie in possession of a good fortune, must be in want of a zombie.**
+- De eerste alinea van hoofdstuk 1 zou nu moeten luiden: **It is a truth universally acknowledged, that a single zombie in possession of a good fortune, must be in want of a zombie.**
 
-- The first time somebody in the book speaks, it should read something like: **“My dear zombie. Bennet,” moaned his zombie to him one day, “have you heard that Netherfield Park is let at last?”**
+- De eerste keer dat iemand in het boek spreekt, zou het er zoiets moeten uitzien als: **“My dear zombie. Bennet,” moaned his zombie to him one day, “have you heard that Netherfield Park is let at last?”**
 
-- Compare your code with the version above if it is not working.
+- Vergelijk jouw code met de bovenstaande versie als deze niet werkt.
 
-- Now you want to tidy your code up a little before moving onto the next part. Place the core code that converts the text into a **function** and then call it.
+- Nu wil je je code een beetje opruimen voordat je naar het volgende deel gaat. Plaats de kerncode die de tekst omzet in een **functie** en roep deze vervolgens aan.
 
     ```python
     import re
@@ -49,30 +49,30 @@
 
     url = "https://www.gutenberg.org/files/1342/1342-0.txt"
     r = requests.get(url)
-    text = r.text
+    tekst = r.text
 
-    def change_prose(text):
-        plural_nouns = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
+    def verander_proza(tekst):
+        meervoud_zelfstandig_naamwoorden = ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
 
-        singular_nouns = ['son', 'daughter', 'child','wife', 'woman', 'mrs', 'miss','husband', 'man', 'mr', 'sir', 'lady']
+        enkelvoud_zelfstandig_naamwoorden = ['son', 'daughter', 'child','wife', 'woman', 'mrs', 'miss','husband', 'man', 'mr', 'sir', 'lady']
 
-        speaking = ['said', 'replied', 'spoke', 'shouted', 'cried']
-        zombie_sounds = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
+        spreken = ['said', 'replied', 'spoke', 'shouted', 'cried']
+        zombie_geluiden = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
 
-        plural_nouns = plural_nouns + [word.title() for word in plural_nouns]
-        singular_nouns = singular_nouns + [word.title() for word in singular_nouns]
+        meervoud_zelfstandig_naamwoorden = meervoud_zelfstandig_naamwoorden + [word.title() for word in meervoud_zelfstandig_naamwoorden]
+        enkelvoud_zelfstandig_naamwoorden = enkelvoud_zelfstandig_naamwoorden + [word.title() for word in enkelvoud_zelfstandig_naamwoorden]
 
 
-        for word in plural_nouns:
-            text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
-        for word in singular_nouns:
-            text = re.sub(r'\b{0}\b'.format(word), 'zombie', text)
-        for word in speaking:
-            text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
+        for word in meervoud_zelfstandig_naamwoorden:
+            tekst = re.sub(r'\b{0}\b'.format(word), 'zombies', tekst)
+        for word in enkelvoud_zelfstandig_naamwoorden:
+            tekst = re.sub(r'\b{0}\b'.format(word), 'zombie', tekst)
+        for word in spreken:
+            tekst = re.sub(r'\b{0}\b'.format(word), choice(zombie_geluiden), tekst)
         return(text)
 
-    text = change_prose(text)
+    tekst = verander_proza(tekst)
 
     with open('Zombie.txt', 'w', encoding="utf-8") as f:
-        f.write(text)
+        f.write(tekst)
     ```
