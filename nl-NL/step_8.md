@@ -1,10 +1,10 @@
 ## Zombie Austen
 
-- So far you've been working on just a few sentences, but the code you have written will work on large texts as well.
+- Tot nu toe heb je aan een paar zinnen gewerkt, maar de code die je hebt geschreven, werkt ook op grote teksten.
 
-- There are a huge number of books in the public domain. They are available on the [Project Gutenberg website](https://www.gutenberg.org/). Included in the archive is Jane Austen's book [*Pride and Prejudice*](https://www.gutenberg.org/files/1342/1342-0.txt).
+- Er zijn een groot aantal boeken in het publieke domein. Ze zijn beschikbaar op de [Project Gutenberg-website](https://www.gutenberg.org/). In het archief is opgenomen het boek [*Pride and Prejudice (Trots en vooroordeel)*](https://www.gutenberg.org/files/1342/1342-0.txt) van Jane Austen.
 
-- You can use Python to fetch this book from the website, but you'll need to use the `requests` module. Import the module along with your other modules.
+- Je kunt Python gebruiken om dit boek van de website te halen, maar je moet de module `requests` gebruiken. Importeer de module samen met je andere modules.
 
     ```python
     import re
@@ -12,40 +12,40 @@
     import requests
     ```
 
-- Now use the `requests` module to fetch the book at https://www.gutenberg.org/files/1342/1342-0.txt, and store its text using the variable name `text`.
+- Gebruik nu de module `requests` om het boek op te halen op https://www.gutenberg.org/files/1342/1342-0.txt en sla de tekst op in de variabele met naam `tekst`.
 
-- The section below shows you how to fetch a webpage and store it. You will just need to adjust the `url`.
+- In het onderstaande gedeelte wordt uitgelegd hoe je een webpagina kunt ophalen en opslaan. Je hoeft alleen de `url` aan te passen.
 
 [[[generic-python-requests]]]
 
-- Once you have the text, it's probably best to write the data out to a file, rather than printing it.
+- Zodra je de tekst hebt, is het waarschijnlijk het beste om de gegevens naar een bestand te schrijven in plaats van deze af te drukken.
 
 [[[generic-python-writing-to-a-file]]]
 
 --- hints --- --- hint ---
 
-- First you need to fetch the page data:
+- Eerst moet je de paginagegevens ophalen:
 
   ```python
   url = "https://www.gutenberg.org/files/1342/1342-0.txt"
   r = requests.get(url)
   ```
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- The text can then be extracted from the data. First delete the line where you currently set `text` to whatever string you were experimenting with. Then replace it with this:
+- De tekst kan vervolgens uit de gegevens worden gehaald. Verwijder eerst de regel waar je momenteel `tekst` instelt op de string waarmee je experimenteerde. Vervang het dan door dit:
 
   ```python
-  text = r.text
+  tekst = r.text
   ```
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- Rather than printing the text, you should write it out to a file. So delete any `print(text)` lines you have, and instead use this at the very end of your script:
+- In plaats van de tekst af te drukken, moet je deze naar een bestand schrijven. Verwijder dus alle `print(tekst)` regels die je hebt, en gebruik het volgende in plaats daarvan helemaal aan het einde van je script:
 
   ```python
   with open('Zombies.txt', 'w', encoding="utf-8") as f:
-      f.write(text)
+      f.write(tekst)
   ```
 
---- /hint --- --- /hints ---
+--- / hint --- --- / hints ---
