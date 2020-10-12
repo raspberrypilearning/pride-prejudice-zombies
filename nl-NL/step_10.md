@@ -1,45 +1,45 @@
-## Zombie language
+## Zombietaal
 
-Although all the prose has now been changed to make the book more appropriate for zombies, all the speech within the book is still in plain English.
+Hoewel al het proza is gewijzigd om het boek geschikter te maken voor zombies, is alle spraak in het boek nog steeds in gewoon Engels.
 
-Although zombies can understand English, that's not the way they speak. It isn't well-known, but there are actually some strict rules regarding how English is translated into zombie language:
+Hoewel zombies Engels kunnen begrijpen, is dat niet de manier waarop ze spreken. Het is niet bekend, maar er zijn eigenlijk enkele strikte regels met betrekking tot de vertaling van Engels in zombietaal:
 
-1. All occurrences of the characters 'eiou' (case-insensitive) needs to be replaced with 'r'
-1. All characters other than 'zhrgbmna .!?-' (case-insensitive) are taken out
-1. Any lower-case 'r' at the end of a word is replaced with 'rh'
-1. An 'a' or 'A' by itself has to be replaced with 'hra'
+1. Alle voorkomens van de tekens 'eiou' (niet hoofdlettergevoelig) moeten worden vervangen door 'r'
+1. Alle tekens behalve 'zhrgbmna.!? -' (niet hoofdlettergevoelig) worden verwijderd
+1. Elke kleine letter 'r' aan het einde van een woord wordt vervangen door 'rh'
+1. Een 'a' of 'A' moet op zichzelf worden vervangen door 'hra'
 
-- Once again regex can help us out with this task. Rather than trying this out on the entire book straight away, **create a new Python file**, so that you can practice on a few sample sentences.
+- Opnieuw kan regex ons helpen met deze taak. In plaats van dit meteen in het hele boek uit te proberen, maak je **een nieuw Python-bestand**, zodat je op een paar voorbeeldzinnen kunt oefenen.
 
-# Rule 1
+# Regel 1
 
-- Try and convert the following text using the first rule.
+- Probeer en converteer de volgende tekst met behulp van de eerste regel.
 
     ```python
     import re
-    text = 'The quick brown fox jumped over the lazy dog'
+    tekst = 'The quick brown fox jumped over the lazy dog'
     ```
 
-- Have a look at the section below to learn how to substitute multiple different characters with regex.
+- Neem een kijkje in de onderstaande sectie voor meer informatie over het vervangen van meerdere verschillende tekens door regex.
 
 [[[generic-python-regex-substitute-multiple-characters]]]
 
-- Now use regex to complete rule 1.
+- Gebruik nu regex om regel 1 te voltooien.
 
 --- hints --- --- hint ---
 
-- You need to convert all the `'e'`,`'i'`,`'o'`, and `'s'` characters, whether they are upper case or lower case, into `'r'` characters.
+- Je moet alle `'e'`,`'i'`,`'o'` en `'s'` tekens, zowel hoofdletters als kleine letters, vervangen door `'r'` tekens.
 
 --- /hint --- --- hint ---
 
-- The regex pattern you should be looking for is `[eiosEIOS]`.
+- Het regex patroon waar je naar zoekt is `[eiosEIOS]`.
 
 --- /hint --- --- hint ---
 
-- The text can be converted with a single line:
+- De tekst kan in een enkele regel code worden geconverteerd:
 
     ```python
-    text = re.sub(r'[eiosEIOS]', 'r', text)
+    tekst = re.sub(r'[eiosEIOS]', 'r', tekst)
     ```
 
 --- /hint --- --- /hints ---
