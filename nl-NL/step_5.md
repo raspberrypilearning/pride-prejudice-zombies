@@ -1,50 +1,50 @@
-## Zombies everywhere
+## Overal zombies
 
-- There's a problem with your script as it is now. Consider this sentence:
+- Er is een probleem met je script zoals het nu is. Overweeg deze zin:
 
     ```
-    text = "The men of the establishment were managing to manoeuvre the mentors."
+    tekst = "The men of the establishment were managing to manoeuvre the mentors."
     ```
 
-- Change the text in your script to the one above, and run it again. This time your text will look a little odd.
+- Wijzig de tekst in je script in de hierboven genoemde tekst en voer deze opnieuw uit. Deze keer ziet je tekst er een beetje vreemd uit.
 
     ```
     The zombies of the establishzombiest were zombieaging to zombieoeuvre the zombiestors.
     ```
 
-- That's way too many zombies! Any `'man'` or `'men'` pattern within the text has been changed to `'zombie'`, so for example the word `'mentors'` is now `'zombiestors'`. How can this be solved?
+- Dat zijn veel te veel zombies! Elk `'man'` of `'men'` patroon in de tekst is veranderd in `'zombie'`, dus het woord `'mentors'` is nu `'zombiestors'`. Hoe kan dit worden opgelost?
 
-- Luckily, the clever people that came up with regex thought about this, and there's a way of only matching whole words.
+- Gelukkig hebben de slimme mensen die met Regex kwamen hierover nagedacht, en er is een manier om alleen hele woorden te matchen.
 
 [[[generic-python-regex-substitute-word-boundaries]]]
 
-- Using `r'\bman\b'` as your search pattern, would only find the specific word `man`. You could then use `re.sub()` to swap out `man` for `zombie`. This would mean using lots of loops though; one for each substitution. Using the `.format` method in Python can ensure you only use two loops; one for plural nouns and one for singular nouns.
+- Als je `r'\bman\b'` als je zoekpatroon gebruikt, wordt alleen het specifieke woord `man` gevonden. Je zou dan `re.sub()` kunnen gebruiken om `man` te ruilen voor `zombie`. Dit zou echter betekenen dat veel lussen worden gebruikt; één voor elke vervanging. Door de methode `.format` in Python te gebruiken, kun je ervoor zorgen dat je slechts twee lussen gebruikt; één voor meervoud zelfstandige naamwoorden en één voor enkelvoud zelfstandige naamwoorden.
 
 [[[generic-python-simple-string-formating]]]
 
-- Now try using `.format()` within your `re.sub()` methods, to automatically turn `'ladies'` into `'zombies'` and `'gentlemen'` into `'zombies'`. You can try it out on this bit of text:
+- Probeer nu `.format()` in jouw `re.sub ()` methoden, om automatisch `'ladies'` in `'zombies'` en `'gentlemen'` in `'zombies'` te veranderen. Je kunt het op dit stukje tekst uitproberen:
 
 ```python
-text = "The gentlemen of the establishment were managing to manoeuvre the mentors, while the ladies relaxed and watched in amusement"
+tekst = "The gentlemen of the establishment were managing to manoeuvre the mentors, while the ladies relaxed and watched in amusement"
 ```
 
 --- hints --- --- hint ---
 
-- Here's how you can set up the pattern you are after.
+- Hier zie je hoe je het patroon kunt instellen waarnaar je op zoek bent.
 
 ```python
-r'\b{0}\b'.format(word)
+r'\b{0}\b'.format(woord)
 ```
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- Within one of your for loops, it would look like this:
+- Binnen een van je for-loops zou het er zo uitzien:
 
 ```python
-for word in plural_nouns:
-    text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
+for woord in meervoud_zelfstandig_naamwoord:
+    tekst = re.sub(r'\b{0}\b'.format(woord), 'zombies', tekst)
 ```
 
-- Now you should be able to do the second for loop by yourself.
+- Nu zou je in staat moeten zijn om de tweede for lus zelf te doen.
 
 --- /hint --- --- /hints ---
