@@ -1,33 +1,33 @@
-## Zombie language - rules 3 and 4
+## Zombie-taal - regels 3 en 4
 
-Rule 3 states that lower-case 'r' characters at the end of words need to be replaced with 'rh'.
+Regel 3 bepaalt dat kleine letters 'r' aan het einde van woorden moeten worden vervangen door 'rh'.
 
-- You've learned how to use `\b` to look for patterns at the beginning and end of words.
+- Je hebt geleerd hoe je `\b` kunt gebruiken om patronen te zoeken aan het begin en einde van woorden.
 
 [[[generic-python-regex-substitute-word-boundaries]]]
 
-- You now need to construct a pattern to search for `'r'` characters at the end of a word, and replace them with `'rh'`
+- Je moet nu een patroon construeren om naar `'r'` tekens aan het einde van een woord te zoeken en deze te vervangen door `'rh'`
 
-- To follow rule 4, you will need another replacement pattern that looks for the characters `'a'` and `'A'` when they are on their own, and replaces them with `'hra'`
+- Om regel 4 te volgen, heb je een ander vervangingspatroon nodig dat op zoek is naar de tekens `'a'` en `'A'` als ze op zichzelf staan en deze vervangen door `'hra'`
 
 --- hints --- --- hint ---
 
-- The first pattern you are searching for is `r'r\b'`.
+- Het eerste patroon waar je naar zoekt is `r'r\b'`.
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- Your full substitution will look like this:
+- Je volledige vervanging ziet er als volgt uit:
 
 ```python
-text = re.sub(r'r\b', 'rh', text)
+tekst = re.sub(r'r\b', 'rh', tekst)
 ```
 
 --- /hint --- --- hint ---
 
-- To find single `a` or `A` characters, you can use the `r'(\b[aA]\b)'` pattern.
+- Om losstaande `a` of `A` tekens te vinden, kun je het patroon `r'(\b[aA]\b)'` gebruiken.
 
 ```python
-text = re.sub(r'(\b[aA]\b)','hra', text)
+tekst = re.sub(r'(\b[aA]\b)','hra', tekst)
 ```
 
 --- /hint --- --- /hints ---
