@@ -4,8 +4,8 @@
 
 - Je bestand zou er ongeveer zo uit moeten zien:
 
-    ```python
-    import re
+```python
+import re
 from random import choice
 import requests
 
@@ -47,7 +47,7 @@ spraak = re.findall(r'“.*?”', tekst, flags=re.DOTALL)
 
 with open('Zombie.txt', 'w', encoding="utf-8") as f:
     f.write(tekst)
-    ```
+```
 
 - De laatste stap is om alle spraak in het boek te doorlopen en te vertalen in zombietaal. Dit kan gebeuren voordat je de functie `proza_veranderen()` aanroept.
 

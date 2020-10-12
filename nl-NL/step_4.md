@@ -47,7 +47,8 @@
 
 - Je tweede for-lus zou onder de eerste moeten beginnen, maar daarbuiten.
 
---- /hint hint ---
+--- /hint ---
+--- hint ---
 
 - Hier is de code om mee te beginnen:
 
@@ -57,7 +58,8 @@ for woord in meervoud_zelfstandig_naamwoorden:
 for woord in enkelvoud_zelfstandig_naamwoorden:
 ```
 
---- /hint hint ---
+--- /hint ---
+--- hint ---
 
 - Gebruik `re.sub(woord, 'zombie', tekst)` om de woorden om te zetten in de tekst.
 

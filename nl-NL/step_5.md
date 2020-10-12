@@ -37,7 +37,8 @@ tekst = "The gentlemen of the establishment were managing to manoeuvre the mento
 r'\b{0}\b'.format(woord)
 ```
 
---- /hint hint ---
+--- /hint ---
+--- hint ---
 
 - Binnen een van je for-loops zou het er zo uitzien:
 

@@ -42,8 +42,7 @@
   ```
 
 --- /hint ---
----
-hint ---
+--- hint ---
 
 - In plaats van de tekst af te drukken, moet je deze naar een bestand schrijven. Verwijder dus alle `print(tekst)` regels die je hebt, en gebruik het volgende in plaats daarvan helemaal aan het einde van je script:
 
