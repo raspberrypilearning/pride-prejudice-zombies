@@ -1,74 +1,74 @@
-## The zombies are on the case
+## De zombies zijn er mee bezig
 
-- So far, apart from the lists of words you generated and the imports, your script's basic logic should look something like this:
+- Tot nu toe, afgezien van de lijsten met woorden die je hebt gegenereerd en de import, zou de basislogica van je script er ongeveer zo uit moeten zien:
 
     ```python
-    for word in plural_nouns:
-        text = re.sub(r'\b{0}\b'.format(word), 'zombies', text)
-    for word in singular_nouns:
-        text = re.sub(r'\b{0}\b'.format(word), 'zombie', text)
+    for woord in meervoud_zelfstandig_naamwoorden:
+        tekst = re.sub(r'\b{0}\b'.format(woord), 'zombies', tekst)
+    for woord in enkelvoud_zelfstandig_naamwoorden:
+        tekst = re.sub(r'\b{0}\b'.format(woord), 'zombie', tekst)
     ```
 
-- This works fine for most texts, but it will fail in the following example:
+- Dit werkt prima voor de meeste teksten, maar in het volgende voorbeeld mislukt het:
 
 ```python
-text = 'Ladies and Gentlemen, will the boys and girls please leave'
+tekst = 'Ladies and Gentlemen, will the boys and girls please leave'
 ```
 
-- This is because our regex substitutions are case-sensitive. So while `'ladies'` will be changed to `'zombies'`, `'Ladies'` won't be changed.
+- Dit komt omdat onze regexvervangingen hoofdlettergevoelig zijn. Dus terwijl `ladies'` wordt gewijzigd in `'zombies'`, wordt `'Ladies'` niet gewijzigd.
 
-- It is possible to ignore case in a regex search, but that would just make everything lower case, and zombies hate bad grammar, so it's not the best solution.
+- Het is mogelijk om hoofdletters te negeren bij een regex-zoekopdracht, maar dat zou alleen maar kleine letters maken, en zombies haten een slechte grammatica, dus het is niet de beste oplossing.
 
-- Instead you can create new lists containing words starting with upper case and lower case letters using two little tricks: **list comprehensions** and **case operations**.
+- In plaats daarvan kun je nieuwe lijsten maken met woorden die beginnen met hoofdletters en kleine letters met behulp van twee kleine trucs: **list comprehensions (lijstbegrippen)** en **case operations (kleine- en hoofdletteroperaties)**.
 
 \[[[generic-python-string-operations-case]]\] \[[[generic-python-simple-list-comprehensions\]]]
 
-- You can use **case operations** and **list comprehensions** to use this:
+- Je kunt **kleine- en hoofdletteroperaties** en **lijstbegrippen** toepassen om dit te gebruiken:
   ```python
   ['ladies', 'gentlemen', 'women', 'men', 'children', 'boys', 'girls']
   ```
 
-  to create the following:
+  om het volgende te maken:
 
   ```python
   ['Ladies', 'Gentlemen', 'Women', 'Men', 'Children', 'Boys', 'Girls']
   ```
 
-- Use what you have learned to create two **new** lists called `plural_nouns_title` and `singular_nouns_title`.
+- Gebruik wat je hebt geleerd om twee **nieuwe** lijsten te maken met de naam `meervoud_zelfstandig_naamwoorden_titel` en `enkelvoud_zelfstandig_naamwoorden_titel`.
 
 --- hints --- --- hint ---
 
-- `'ladies'` can be turned into `'Ladies'` using the `.title()` operation.
+- `'ladies'` kan worden omgezet in `'Ladies'` met behulp van de bewerking `.title()`.
 
     ```python
     >>> 'ladies'.title()
     'Ladies'
     ```
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- The basic structure of the list comprehension would be something like this:
+- De basisstructuur van het lijstbegrip zou ongeveer zo zijn:
 
     ```python
-    [word.title() for word in plural_nouns]
+    [woord.title() for woord in meervoud_zelfstandig_naamwoord]
     ```
 
---- /hint --- --- hint ---
+--- /hint hint ---
 
-- The full list comprehension will be:
+- Het volledige lijstbegrip zal zijn:
   ```python
-  plural_nouns_title = [word.title() for word in plural_nouns]
+  meervoud_zelfstandig_naamwoorden_titel = [woord.title() for woord in meervoud_zelfstandig_naamwoorden]
   ```
 
-- The same needs to be done for the singular nouns.
+- Hetzelfde moet worden gedaan voor de enkelvoud zelfstandige naamwoorden.
 
 --- /hint --- --- /hints ---
 
-- Now you will need an additional **two** `for` loops. One for `plural_nouns_title` and one for `singular_nouns_title`.
+- Nu heb je nog eens **twee** `for` lussen nodig. Een voor `meervoud_zelfstandig_naamwoorden_titel` en een voor `enkelvoud_zelfstandig_naamwoorden_titel`.
 
     ```python
-    for word in plural_nouns_title:
-        text = re.sub(r'\b{0}\b'.format(word), 'Zombies', text)
-    for word in singular_nouns_title:
-        text = re.sub(r'\b{0}\b'.format(word), 'Zombie', text)
+    for woord in meervoud_zelfstandig_naamwoorden:
+        tekst = re.sub(r'\b{0}\b'.format(woord), 'Zombies', tekst)
+    for woord in enkelvoud_zelfstandig_naamwoorden:
+        tekst = re.sub(r'\b{0}\b'.format(woord), 'Zombie', tekst)
     ```
