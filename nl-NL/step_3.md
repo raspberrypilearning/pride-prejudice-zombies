@@ -1,14 +1,14 @@
-## Making it all about zombies
+## Alles over zombies maken
 
-- First you're going to figure out how to change a simple sentence so it is all about zombies.
+- Eerst ga je uitzoeken hoe je een eenvoudige zin kunt veranderen, zodat het allemaal over zombies gaat.
 
     ```
     The woman laughed at the silly men.
     ```
 
-- There are only two words to be replaced to begin with: `'woman'` and `'men'`. The first needs to become `'zombie'` and the second needs to become `'zombies'`.
+- Om te beginnen zijn er slechts twee woorden te vervangen: `'woman'` en `'men'`. De eerste moet `'zombie'` worden en de tweede moet `'zombies'` worden.
 
-- To replace these words, you can use **reg**ular **ex**pressions, or regex. Regex allows you to find **patterns** of characters in text. Have a look at the section below, and see if you can figure out how to convert the above sentence so that it reads:
+- Om deze woorden te vervangen, kun je **reg**ular **ex**pressions of regex gebruiken. Met regex kun je **patronen** van tekens in tekst vinden. Neem een kijkje in de onderstaande sectie en kijk of je kunt achterhalen hoe je de bovenstaande zin kunt converteren zodat deze luidt:
 
     ```
     The zombie laughed at the silly zombies.
@@ -18,29 +18,29 @@
 
 --- hints --- --- hint ---
 
-Begin by importing the `re` module and creating the string you want to alter.
+Begin met het importeren van de `re` module en creëer de string die je wilt wijzigen.
 
 ```python
 import re
-text = 'The woman laughed at the silly men.'
+tekst = 'The woman laughed at the silly men.'
 ```
 
 --- /hint --- --- hint ---
 
-Now you want to use the `re.sub()` method to first change `'woman'` to `'zombie'`, and then use it again to change `'men'` to `'zombies'`.
+Nu wil je de `re.sub()` methode gebruiken om eerst `'woman'` in `'zombie'` te veranderen en dan het nog een keer gebruiken om `'men'` in `'zombies'` te veranderen.
 
 ```python
-text = re.sub('pattern to find', 'pattern to replace', text)
+tekst = re.sub('patroon om te vinden', 'patroon om te vervangen', tekst)
 ```
 
 --- /hint --- --- hint ---
 
-You first substitution would therefore look like this.
+Je eerste wijziging zou er zo uit moeten zien.
 
 ```python
-text = re.sub('woman', 'zombie', text)
+tekst = re.sub('woman', 'zombie', tekst)
 ```
 
-Now you just need to repeat this line but use `'men'` and `'zombies'`.
+Nu moet je dit herhalen maar dan gebruik je `'men'` en `'zombies'`.
 
 --- /hint --- --- /hints ---
