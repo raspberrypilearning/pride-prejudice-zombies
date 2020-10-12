@@ -1,41 +1,41 @@
-## Zombies moan and groan
+## Zombies kreunen en steunen
 
-- Let's change the text that your working on.
+- Laten we de tekst wijzigen waaraan je werkt.
   ```python
-  text = '"I am tired", the man said'
+  tekst = '"I am tired", the man said'
   ```
 
-- Zombies don't say things, they groan, moan and growl. So the text needs further alteration.
+- Zombies zeggen geen dingen, ze kreunen, steunen en grommen. Dus de tekst moet verder worden aangepast.
 
-- Start by making a list of words that indicate speech. Here are a few examples:
-
-    ```python
-    speaking = ['said', 'replied', 'spoke', 'shouted', 'cried', 'whispered']
-    ```
-
-- Then make another list using words that describe how zombies sound. Here are a few you might like to start with:
+- Begin met het maken van een lijst met woorden die op spraak wijzen. Hier zijn een paar voorbeelden:
 
     ```python
-    zombie_sounds = ['groaned', 'moaned' ,'growled', 'screamed', 'gurgled']
+    spreken = ['said', 'replied', 'spoke', 'shouted', 'cried', 'whispered']
     ```
 
-- Now you can use another for loop to replace every word in the text that is in the `speaking` list with a random word from the `zombie_sounds` list.
+- Maak vervolgens een andere lijst met woorden die beschrijven hoe zombies klinken. Hier zijn een paar waarmee je misschien wilt beginnen:
 
-- First you'll need to import the `choice` method from the `random` module.
+    ```python
+    zombie_sounds = ['groaned', 'moaned', 'growled', 'screamed', 'gurgled']
+    ```
+
+- Nu kun je een andere for-lus gebruiken om elk woord in de tekst in de `spreken` lijst te vervangen door een willekeurig woord uit de `zombie_geluiden` lijst.
+
+- Eerst moet je de `choice` methode importeren uit de `random` module.
 
     ```python
     import re
     from random import choice
     ```
 
-- Then construct the for loop, using the same regex substitution method you used before, but this time using a random item from `zombie_sounds`.
+- Stel vervolgens de for-lus samen met dezelfde regex-substitutiemethode die je eerder hebt gebruikt, maar deze keer met een willekeurig item uit `zombie_geluiden`.
 
     ```python
-    for word in speaking:
-        text = re.sub(r'\b{0}\b'.format(word), choice(zombie_sounds), text)
+    for woord in spreken:
+        tekst = re.sub(r'\b{0}\b'.format(woord), choice(zombie_geluiden), tekst)
     ```
 
-- Running your code now should give you the following output, with the final word randomly chosen from the list.
+- Als je je code nu uitvoert, krijg je de volgende uitvoer, waarbij het laatste woord willekeurig wordt gekozen uit de lijst.
 
 ```python
 >>> "I am tired", the zombie groaned
