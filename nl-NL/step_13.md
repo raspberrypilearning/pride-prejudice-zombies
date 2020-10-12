@@ -1,24 +1,24 @@
-## Putting the translator together
+## De vertaler samenstellen
 
-- You can now put all the substitutions together.
+- Je kunt nu alle vervangingen samenvoegen.
 
     ```python
     import re
-    text = 'The quick brown fox jumped over the lazy dog'
+    tekst = 'The quick brown fox jumped over the lazy dog'
 
-    def zombify_speech(text):
-        text = re.sub(r'[eiosEIOS]', 'r', text)
-        text = re.sub(r'[^zhrgbmnaZHRGBMNA?\n .!?-]', '', text)
-        text = re.sub(r'r\b', 'rh', text)
-        text = re.sub(r'(\b[aA]\b)','hra', text)
-        return text
+    def zombificeer_spraak(tekst):
+        tekst = re.sub(r'[eiosEIOS]', 'r', tekst)
+        tekst = re.sub(r'[^zhrgbmnaZHRGBMNA?\n .!?-]', '', tekst)
+        tekst = re.sub(r'r\b', 'rh', text)
+        tekst = re.sub(r'(\b[aA]\b)','hra', text)
+        return tekst
 
-    text = zombify_speech(text)
+    tekst = zombificeer_spraak(tekst)
     ```
 
-- If you run your program and then query the value of `text` in the interpreter, you should see the following.
+- Als je je programma uitvoert en vervolgens de waarde van `tekst` in de interpreter opvraagt, zou je het volgende moeten zien.
 
     ```python
-    >>> text
+    >>> tekst
     'hrh rh brrn rh mrh rrrh hrh az rg'
     ```
