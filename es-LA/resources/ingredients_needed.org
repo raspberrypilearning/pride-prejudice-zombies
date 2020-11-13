@@ -1,0 +1,5 @@
+- sustituir texto - patrones únicos
+- sustituir texto - palabras completas
+- sustituir texto - grupos de letras
+- sustituir texto - ignorar
+
