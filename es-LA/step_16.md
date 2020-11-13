@@ -1,4 +1,4 @@
-## Llevándolo más lejos
+## Llevarlo más lejos
 
 --- challenge ---
 
