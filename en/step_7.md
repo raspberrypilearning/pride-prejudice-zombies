@@ -1,6 +1,6 @@
 ## Zombies moan and groan
 
-- Let's change the text that your working on.
+- Let's change the text that you're working on.
   ```python
   text = '"I am tired", the man said'
   ```
