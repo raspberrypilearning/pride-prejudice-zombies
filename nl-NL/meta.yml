@@ -1,7 +1,8 @@
 ---
 title: Trots en vooroordelen voor zombies
 hero_image: images/banner.png
-description: Maak een zombievriendelijke versie van de roman van Jane Austen om onze nieuwe lijkkleurig opperheren te kalmeren
+description: Maak een zombievriendelijke versie van de roman van Jane Austen om onze
+  nieuwe lijkkleurig opperheren te kalmeren
 original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
 theme: green
 duration: 3
@@ -17,19 +18,21 @@ software: python
 version: 4
 last_tested: 2018-10-01
 steps:
-  - title: Inleiding
-  - title: Wat heb je nodig
-  - title: Alles over Zombies maken
-  - title: Meerdere vergelijkbare vervangingen
-  - title: Overal zombies
-  - title: De zombies zijn er mee bezig
-  - title: Zombies kreunen en steunen
-  - title: Zombie Austen
-  - title: Functies toevoegen
-  - title: Zombietaal
-  - title: Regel 2
-  - title: Regel 3 en 4
-  - title: De vertaler samenstellen
-  - title: Spraak zoeken
-  - title: Afwerking
-  - title: "Uitdaging: verder gaan"
+- title: Inleiding
+- title: Wat heb je nodig
+  completion: engaged
+- title: Alles over Zombies maken
+- title: Meerdere vergelijkbare vervangingen
+- title: Overal zombies
+- title: De zombies zijn er mee bezig
+- title: Zombies kreunen en steunen
+- title: Zombie Austen
+- title: Functies toevoegen
+- title: Zombietaal
+- title: Regel 2
+- title: Regel 3 en 4
+- title: De vertaler samenstellen
+- title: Spraak zoeken
+- title: Afwerking
+  completion: internal
+- title: 'Uitdaging: verder gaan'
