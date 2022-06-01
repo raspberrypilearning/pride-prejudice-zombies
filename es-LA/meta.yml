@@ -1,7 +1,8 @@
 ---
 title: Orgullo y Prejuicio para zombies
 hero_image: images/banner.png
-description: Crea una versión para zombies de la novela de Jane Austen para aplacar a nuestros nuevos señores cadavéricos
+description: Crea una versión para zombies de la novela de Jane Austen para aplacar
+  a nuestros nuevos señores cadavéricos
 original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
 theme: green
 duration: 3
@@ -17,19 +18,23 @@ software: python
 version: 4
 last_tested: 2018-10-01
 steps:
-  - title: Introducción
-  - title: Lo que necesitarás
-  - title: Haciéndolo todo sobre zombies
-  - title: Múltiples reemplazos similares
-  - title: Zombies en todas partes
-  - title: Los zombies están en las mayúsculas
-  - title: Los zombies gimen y gruñen
-  - title: Zombie Austen
-  - title: Añadiendo funciones
-  - title: Idioma zombie
-  - title: Regla 2
-  - title: Reglas 3 y 4
-  - title: Ensamblando el traductor
-  - title: Encontrando discursos
-  - title: Finalizando
-  - title: "Desafío: Llevarlo más lejos"
+- title: Introducción
+- title: Lo que necesitarás
+- title: Haciéndolo todo sobre zombies
+- title: Múltiples reemplazos similares
+  completion:
+  - engaged
+- title: Zombies en todas partes
+- title: Los zombies están en las mayúsculas
+- title: Los zombies gimen y gruñen
+- title: Zombie Austen
+- title: Añadiendo funciones
+- title: Idioma zombie
+- title: Regla 2
+- title: Reglas 3 y 4
+- title: Ensamblando el traductor
+- title: Encontrando discursos
+- title: Finalizando
+  completion:
+  - internal
+- title: 'Desafío: Llevarlo más lejos'
