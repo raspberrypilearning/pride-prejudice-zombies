@@ -20,9 +20,10 @@ last_tested: 2018-10-01
 steps:
 - title: Inleiding
 - title: Wat heb je nodig
-  completion: engaged
 - title: Alles over Zombies maken
 - title: Meerdere vergelijkbare vervangingen
+  completion:
+  - engaged
 - title: Overal zombies
 - title: De zombies zijn er mee bezig
 - title: Zombies kreunen en steunen
@@ -34,5 +35,6 @@ steps:
 - title: De vertaler samenstellen
 - title: Spraak zoeken
 - title: Afwerking
-  completion: internal
+  completion:
+  - internal
 - title: 'Uitdaging: verder gaan'

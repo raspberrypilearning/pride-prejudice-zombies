@@ -20,9 +20,10 @@ last_tested: 2018-10-01
 steps:
 - title: Introduction
 - title: What you will need
-  completion: engaged
 - title: Making it all about Zombies
 - title: Multiple similar replacements
+  completion:
+  - engaged
 - title: Zombies everywhere.
 - title: The zombies are on the case
 - title: Zombies moan and groan
@@ -34,5 +35,6 @@ steps:
 - title: Putting the translator together
 - title: Finding speech
 - title: Finishing Off
-  completion: internal
+  completion:
+  - internal
 - title: 'Challenge: Taking it further'

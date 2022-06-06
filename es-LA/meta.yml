@@ -20,9 +20,10 @@ last_tested: 2018-10-01
 steps:
 - title: Introducción
 - title: Lo que necesitarás
-  completion: engaged
 - title: Haciéndolo todo sobre zombies
 - title: Múltiples reemplazos similares
+  completion:
+  - engaged
 - title: Zombies en todas partes
 - title: Los zombies están en las mayúsculas
 - title: Los zombies gimen y gruñen
@@ -34,5 +35,6 @@ steps:
 - title: Ensamblando el traductor
 - title: Encontrando discursos
 - title: Finalizando
-  completion: internal
+  completion:
+  - internal
 - title: 'Desafío: Llevarlo más lejos'
